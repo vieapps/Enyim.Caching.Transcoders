@@ -8,15 +8,15 @@ It serialize object using [Protocol Buffers](http://code.google.com/p/protobuf-n
 ### The appsettings.json file
 ```json
 {
-  "EnyimMemcached": {
+	"EnyimMemcached": {
 		"Servers": [
-		  {
+			{
 				"Address": "127.0.0.1",
 				"Port": 11211
-		  }
+			}
 		],
 		"Transcoder": "Enyim.Caching.Memcached.BsonTranscoder, Enyim.Caching.Transcoders"
-  }
+	}
 }
 ```
 ### The app.config/web.config file 
