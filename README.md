@@ -1,14 +1,14 @@
 # VIEApps.Enyim.Caching.Transcoders
-The custom transcoders of [VIEApps.Enyim.Caching](https://github.com/vieapps/Enyim.Caching).
-It serialize object using [Protocol Buffers](http://code.google.com/p/protobuf-net/), [Json.NET Bson](https://github.com/JamesNK/Newtonsoft.Json.Bson) and [MessagePack](https://github.com/msgpack/msgpack-cli).
-## Nuget
+- The custom transcoders of [VIEApps.Enyim.Caching](https://github.com/vieapps/Enyim.Caching).
+- Its serializes object using [Protocol Buffers](http://code.google.com/p/protobuf-net/), [Json.NET Bson](https://github.com/JamesNK/Newtonsoft.Json.Bson) and [MessagePack](https://github.com/msgpack/msgpack-cli).
+## NuGet
 - Package ID: VIEApps.Enyim.Caching.Transcoders
 - Details: https://www.nuget.org/packages/VIEApps.Enyim.Caching.Transcoders
 ## Configuration
 ### The appsettings.json file
 ```json
 {
-	"EnyimMemcached": {
+	"Memcached": {
 		"Servers": [
 			{
 				"Address": "127.0.0.1",
