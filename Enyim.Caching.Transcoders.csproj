@@ -8,7 +8,7 @@
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
 		<AssemblyVersion>1.4.0.1801</AssemblyVersion>
 		<FileVersion>1.4.0.1801</FileVersion>
-		<InformationalVersion>v1.4.netstandard-2+rev:2018.01.02</InformationalVersion>
+		<InformationalVersion>v1.4.netstandard-2+rev:2017.12.25</InformationalVersion>
 		<Product>Enyim Memcached</Product>
 		<Company>VIEApps.net</Company>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -46,7 +46,7 @@
 		<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
 		<PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.1" />
 		<PackageReference Include="protobuf-net" Version="2.3.3" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.4.0.1801-rc5" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.4.0.1801" />
 	</ItemGroup>
 	
 </Project>
