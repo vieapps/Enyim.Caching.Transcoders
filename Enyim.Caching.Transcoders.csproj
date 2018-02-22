@@ -6,14 +6,14 @@
 		<RootNamespace>Enyim</RootNamespace>
 		<AssemblyName>Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
-		<AssemblyVersion>1.4.2.1802</AssemblyVersion>
-		<FileVersion>1.4.2.1802</FileVersion>
-		<InformationalVersion>v1.4.netstandard-2+rev:2018.01.31</InformationalVersion>
+		<AssemblyVersion>1.4.3.1802</AssemblyVersion>
+		<FileVersion>1.4.3.1802</FileVersion>
+		<InformationalVersion>v1.4.netstandard-2+rev:2018.02.22</InformationalVersion>
 		<Product>Enyim Memcached</Product>
 		<Company>VIEApps.net</Company>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageId>VIEApps.Enyim.Caching.Transcoders</PackageId>
-		<Version>1.4.2.1802</Version>
+		<Version>1.4.3.1802</Version>
 		<SignAssembly>false</SignAssembly>
 		<DelaySign>false</DelaySign>
 		<AssemblyOriginatorKeyFile>../VIEApps.Components.snk</AssemblyOriginatorKeyFile>
@@ -22,6 +22,7 @@
 		<Authors>VIEApps.net</Authors>
 		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © 2018 VIEApps.net</Copyright>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
+		<PackageReleaseNotes>Upgrade to latest components</PackageReleaseNotes>
 		<PackageProjectUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
 	</PropertyGroup>
@@ -43,9 +44,9 @@
 
 	<ItemGroup>
 		<PackageReference Include="MsgPack.Cli" Version="0.9.2" />
-		<PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
 		<PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.1" />
-		<PackageReference Include="protobuf-net" Version="2.3.5" />
+		<PackageReference Include="protobuf-net" Version="2.3.7" />
 		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.4.2.1802" />
 	</ItemGroup>
 	
