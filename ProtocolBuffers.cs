@@ -20,7 +20,7 @@ namespace Enyim.Caching.Memcached
 			{
 				ProtocolBuffersTranscoder.WriteType(stream, value.GetType());
 				Serializer.NonGeneric.Serialize(stream, value);
-				return new ArraySegment<byte>(stream.ToArray(), 0, (int)stream.Length);
+				return new ArraySegment<byte>(stream.GetBuffer(), 0, (int)stream.Length);
 			}
 		}
 
