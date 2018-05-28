@@ -1,11 +1,17 @@
 # VIEApps.Enyim.Caching.Transcoders
+
 - The custom transcoders of [VIEApps.Enyim.Caching](https://github.com/vieapps/Enyim.Caching).
+
 - Its serializes object using [Protocol Buffers](http://code.google.com/p/protobuf-net/), [Json.NET Bson](https://github.com/JamesNK/Newtonsoft.Json.Bson) and [MessagePack](https://github.com/msgpack/msgpack-cli).
+
 ## NuGet
-- Package ID: VIEApps.Enyim.Caching.Transcoders
-- Details: https://www.nuget.org/packages/VIEApps.Enyim.Caching.Transcoders
+
+[![NuGet](https://img.shields.io/nuget/v/VIEApps.Enyim.Caching.Transcoders.svg)](https://www.nuget.org/packages/VIEApps.Enyim.Caching.Transcoders)
+
 ## Configuration
+
 ### The appsettings.json file
+
 ```json
 {
 	"Memcached": {
@@ -19,7 +25,9 @@
 	}
 }
 ```
+
 ### The app.config/web.config file 
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
@@ -35,11 +43,15 @@
 	</memcached>
 </configuration>
 ```
+
 ## Available transcoders
+
 - Default (BinaryFormatter): `Enyim.Caching.Memcached.DefaultTranscoder, Enyim.Caching`
 - Protocol Buffers: `Enyim.Caching.Memcached.ProtocolBuffersTranscoder, Enyim.Caching.Transcoders`
 - Json.NET Bson: `Enyim.Caching.Memcached.BsonTranscoder, Enyim.Caching.Transcoders`
 - Message Pack Array mode: `Enyim.Caching.Memcached.MessagePackArrayTranscoder, Enyim.Caching.Transcoders`
 - Message Pack Map mode: `Enyim.Caching.Memcached.MessagePackMapTranscoder, Enyim.Caching.Transcoders`
+
 ## Performance
+
 See the results of <b>neuecc</b> at https://github.com/neuecc/MemcachedTranscoder/blob/master/ReadMe.md
