@@ -1,6 +1,8 @@
 using System;
 using System.Text.RegularExpressions;
 
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("VIEApps.Components.XUnitTests")]
+
 namespace Enyim.Caching.Memcached
 {
 	internal static class Helper
