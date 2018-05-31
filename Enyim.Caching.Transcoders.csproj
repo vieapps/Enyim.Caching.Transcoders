@@ -5,16 +5,15 @@
 		<RootNamespace>Enyim</RootNamespace>
 		<AssemblyName>Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
-		<AssemblyVersion>1.5.2.1806</AssemblyVersion>
-		<FileVersion>1.5.2.1806</FileVersion>
-		<InformationalVersion>v1.5.netstandard-2+rev:2018.05.28</InformationalVersion>
+		<AssemblyVersion>1.5.3.1806</AssemblyVersion>
+		<FileVersion>1.5.3.1806</FileVersion>
+		<InformationalVersion>v1.5.netstandard-2+rev:2018.06.01</InformationalVersion>
 		<Product>Enyim Memcached</Product>
 		<Company>VIEApps.net</Company>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageId>VIEApps.Enyim.Caching.Transcoders</PackageId>
-		<Version>1.5.2.1806</Version>
+		<Version>1.5.3.1806</Version>
 		<SignAssembly>false</SignAssembly>
-		<DelaySign>false</DelaySign>
 		<AssemblyOriginatorKeyFile>../VIEApps.Components.snk</AssemblyOriginatorKeyFile>
 		<Title>Enyim Memcached Transcoders</Title>
 		<Description>The custom transcoders for VIEApps Enyim Caching (Protocol Buffers, Json.NET Bson, MessagePack)</Description>
@@ -47,7 +46,7 @@
 		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
 		<PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.1" />
 		<PackageReference Include="protobuf-net" Version="2.3.7" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.5.2.1806" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.5.3.1806" />
 	</ItemGroup>
 	
 </Project>
