@@ -5,14 +5,14 @@
 		<RootNamespace>Enyim</RootNamespace>
 		<AssemblyName>Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
-		<AssemblyVersion>1.5.3.1806</AssemblyVersion>
-		<FileVersion>1.5.3.1806</FileVersion>
-		<InformationalVersion>v1.5.netstandard-2+rev:2018.06.01</InformationalVersion>
+		<AssemblyVersion>1.5.4.1808</AssemblyVersion>
+		<FileVersion>1.5.4.1808</FileVersion>
+		<InformationalVersion>v1.5.netstandard-2+rev:2018.08.01</InformationalVersion>
 		<Product>Enyim Memcached</Product>
 		<Company>VIEApps.net</Company>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageId>VIEApps.Enyim.Caching.Transcoders</PackageId>
-		<Version>1.5.3.1806</Version>
+		<Version>1.5.4.1808</Version>
 		<SignAssembly>false</SignAssembly>
 		<AssemblyOriginatorKeyFile>../VIEApps.Components.snk</AssemblyOriginatorKeyFile>
 		<Title>Enyim Memcached Transcoders</Title>
@@ -20,7 +20,7 @@
 		<Authors>VIEApps.net</Authors>
 		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © 2018 VIEApps.net</Copyright>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
-		<PackageReleaseNotes>Upgrade to latest components to avoid potential bugs</PackageReleaseNotes>
+		<PackageReleaseNotes>Upgrade to latest components to get better performance</PackageReleaseNotes>
 		<PackageProjectUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</PackageProjectUrl>
 		<PackageIconUrl>https://github.com/vieapps/Components.Utility/raw/master/logo.png</PackageIconUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
@@ -42,11 +42,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="MsgPack.Cli" Version="0.9.2" />
+		<PackageReference Include="MsgPack.Cli" Version="1.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
 		<PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.1" />
-		<PackageReference Include="protobuf-net" Version="2.3.7" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.5.3.1806" />
+		<PackageReference Include="protobuf-net" Version="2.3.13" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.5.4.1808" />
 	</ItemGroup>
 	
 </Project>
