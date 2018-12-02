@@ -16,7 +16,7 @@ namespace Enyim.Caching.Memcached
 
 		protected override ArraySegment<byte> SerializeObject(object value)
 		{
-			using (var stream = new MemoryStream())
+			using (var stream = CacheUtils.Helper.CreateMemoryStream())
 			{
 				ProtocolBuffersTranscoder.WriteType(stream, value.GetType());
 				Serializer.NonGeneric.Serialize(stream, value);
@@ -30,7 +30,7 @@ namespace Enyim.Caching.Memcached
 			var count = value.Count;
 			var offset = value.Offset;
 			var type = ProtocolBuffersTranscoder.ReadType(raw, ref offset, ref count);
-			using (var stream = new MemoryStream(raw, offset, count, writable: false))
+			using (var stream = CacheUtils.Helper.CreateMemoryStream(raw, offset, count))
 			{
 				return Serializer.NonGeneric.Deserialize(type, stream);
 			}
@@ -38,22 +38,20 @@ namespace Enyim.Caching.Memcached
 
 		static Type ReadType(byte[] buffer, ref int offset, ref int count)
 		{
-			if (count < 4) throw new EndOfStreamException();
+			if (count < 4)
+				throw new EndOfStreamException();
 
 			// len is size of header typeName(string)
-			var len = (int)buffer[offset++]
-				   | (buffer[offset++] << 8)
-				   | (buffer[offset++] << 16)
-				   | (buffer[offset++] << 24);
+			var length = (int)buffer[offset++] | (buffer[offset++] << 8) | (buffer[offset++] << 16) | (buffer[offset++] << 24);
 			count -= 4; // count is message total size, decr typeName length(int)
-			if (count < len)
+			if (count < length)
 				throw new EndOfStreamException();
 			var keyOffset = offset;
-			offset += len; // skip typeName body size
-			count -= len; // decr typeName body size
+			offset += length; // skip typeName body size
+			count -= length; // decr typeName body size
 
 			// avoid encode string
-			var key = new ArraySegment<byte>(buffer, keyOffset, len);
+			var key = new ArraySegment<byte>(buffer, keyOffset, length);
 			if (!ProtocolBuffersTranscoder.ReadCache.TryGetValue(key, out Type type))
 			{
 				var typeName = ProtocolBuffersTranscoder.DefaultEncoding.GetString(key.Array, key.Offset, key.Count);

@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Collections.Concurrent;
-
 using MsgPack.Serialization;
 
 namespace Enyim.Caching.Memcached
@@ -16,19 +15,19 @@ namespace Enyim.Caching.Memcached
 		{
 			var type = value.GetType();
 			var typeName = writeCache.GetOrAdd(type, Helper.BuildTypeName);
-			using (var stream = new MemoryStream())
+			using (var stream = CacheUtils.Helper.CreateMemoryStream())
 			{
 				var packer = MsgPack.Packer.Create(stream);
 				packer.PackArrayHeader(2);
 				packer.PackString(typeName);
 				MessagePackSerializer.Get(type, defaultContext).PackTo(packer, value);
-				return new ArraySegment<byte>(stream.GetBuffer(), 0, (int)stream.Length);
+				return new ArraySegment<byte>(stream.ToArray(), 0, (int)stream.Length);
 			}
 		}
 
 		protected override object DeserializeObject(ArraySegment<byte> value)
 		{
-			using (var stream = new MemoryStream(value.Array, value.Offset, value.Count, writable: false))
+			using (var stream = CacheUtils.Helper.CreateMemoryStream(value.Array, value.Offset, value.Count))
 			{
 				var unpacker = MsgPack.Unpacker.Create(stream);
 				unpacker.Read();
@@ -38,8 +37,7 @@ namespace Enyim.Caching.Memcached
 					var typeName = (string)unpacker.LastReadData;
 					var type = readCache.GetOrAdd(typeName, x => Type.GetType(x, throwOnError: true));
 					unpacker.Read();
-					var unpackedValue = MessagePackSerializer.Get(type, defaultContext).UnpackFrom(unpacker);
-					return unpackedValue;
+					return MessagePackSerializer.Get(type, defaultContext).UnpackFrom(unpacker);
 				}
 				else
 				{
