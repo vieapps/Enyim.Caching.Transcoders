@@ -5,24 +5,24 @@
 		<RootNamespace>Enyim</RootNamespace>
 		<AssemblyName>Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
-		<AssemblyVersion>1.5.1812.1</AssemblyVersion>
-		<FileVersion>1.5.1812.1</FileVersion>
-		<InformationalVersion>v1.5.netstandard-2+rev:2018.12.03-memstrm</InformationalVersion>
+		<SignAssembly>false</SignAssembly>
+		<AssemblyOriginatorKeyFile>../VIEApps.Components.snk</AssemblyOriginatorKeyFile>
+		<AssemblyVersion>1.5.1812.2</AssemblyVersion>
+		<FileVersion>1.5.1812.2</FileVersion>
+		<InformationalVersion>v1.5.netstandard-2+rev:2018.12.04-lstcmp</InformationalVersion>
 		<Product>Enyim Memcached</Product>
 		<Company>VIEApps.net</Company>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageId>VIEApps.Enyim.Caching.Transcoders</PackageId>
-		<Version>1.5.1812.1</Version>
-		<SignAssembly>false</SignAssembly>
-		<AssemblyOriginatorKeyFile>../VIEApps.Components.snk</AssemblyOriginatorKeyFile>
+		<Version>1.5.1812.2</Version>
 		<Title>Enyim Memcached Transcoders</Title>
 		<Description>The custom transcoders for VIEApps Enyim Caching (Protocol Buffers, Json.NET Bson, MessagePack)</Description>
 		<Authors>VIEApps.net</Authors>
 		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © 2018 VIEApps.net</Copyright>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
 		<PackageReleaseNotes>Upgrade to latest components</PackageReleaseNotes>
-		<PackageProjectUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</PackageProjectUrl>
 		<PackageIconUrl>https://github.com/vieapps/Components.Utility/raw/master/logo.png</PackageIconUrl>
+		<PackageProjectUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
 	</PropertyGroup>
 
@@ -38,6 +38,7 @@
 		<None Remove=".DS_Store" />
 		<None Remove=".gitattributes" />
 		<None Remove=".gitignore" />
+		<None Remove="LICENSE.md" />
 		<None Remove="README.md" />
 	</ItemGroup>
 
@@ -46,7 +47,7 @@
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 		<PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
 		<PackageReference Include="protobuf-net" Version="2.4.0" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.5.1812.1" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.5.1812.2" />
 	</ItemGroup>
 	
 </Project>
