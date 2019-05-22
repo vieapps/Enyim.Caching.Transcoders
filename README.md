@@ -46,11 +46,11 @@
 
 ## Available transcoders
 
-- Default (BinaryFormatter): `Enyim.Caching.Memcached.DefaultTranscoder, Enyim.Caching`
-- Protocol Buffers: `Enyim.Caching.Memcached.ProtocolBuffersTranscoder, Enyim.Caching.Transcoders`
-- Json.NET Bson: `Enyim.Caching.Memcached.BsonTranscoder, Enyim.Caching.Transcoders`
-- Message Pack Array mode: `Enyim.Caching.Memcached.MessagePackArrayTranscoder, Enyim.Caching.Transcoders`
-- Message Pack Map mode: `Enyim.Caching.Memcached.MessagePackMapTranscoder, Enyim.Caching.Transcoders`
+- Default (BinaryFormatter): `Enyim.Caching.Memcached.DefaultTranscoder,Enyim.Caching`
+- Protocol Buffers: `Enyim.Caching.Memcached.ProtocolBuffersTranscoder,Enyim.Caching.Transcoders`
+- Json.NET Bson: `Enyim.Caching.Memcached.BsonTranscoder,Enyim.Caching.Transcoders`
+- Message Pack Array mode: `Enyim.Caching.Memcached.MessagePackArrayTranscoder,Enyim.Caching.Transcoders`
+- Message Pack Map mode: `Enyim.Caching.Memcached.MessagePackMapTranscoder,Enyim.Caching.Transcoders`
 
 ## Performance
 

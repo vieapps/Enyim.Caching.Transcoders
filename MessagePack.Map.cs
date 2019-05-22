@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Collections.Concurrent;
 using MsgPack.Serialization;
+using CacheUtils;
 
 namespace Enyim.Caching.Memcached
 {
@@ -17,20 +18,20 @@ namespace Enyim.Caching.Memcached
 		protected override ArraySegment<byte> SerializeObject(object value)
 		{
 			var type = value.GetType();
-			var typeName = writeCache.GetOrAdd(type, Helper.BuildTypeName);
-			using (var stream = CacheUtils.Helper.CreateMemoryStream())
+			var typeName = writeCache.GetOrAdd(type, TranscodersHelper.BuildTypeName);
+			using (var stream = Helper.CreateMemoryStream())
 			{
 				var packer = MsgPack.Packer.Create(stream);
 				packer.PackArrayHeader(2);
 				packer.PackString(typeName);
 				MessagePackSerializer.Get(type, defaultContext).PackTo(packer, value);
-				return new ArraySegment<byte>(stream.ToArray(), 0, (int)stream.Length);
+				return stream.GetArraySegment();
 			}
 		}
 
 		protected override object DeserializeObject(ArraySegment<byte> value)
 		{
-			using (var stream = CacheUtils.Helper.CreateMemoryStream(value.Array, value.Offset, value.Count))
+			using (var stream = Helper.CreateMemoryStream(value.Array, value.Offset, value.Count))
 			{
 				var unpacker = MsgPack.Unpacker.Create(stream);
 				unpacker.Read();

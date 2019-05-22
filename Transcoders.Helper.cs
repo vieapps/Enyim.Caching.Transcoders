@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace Enyim.Caching.Memcached
 {
-	internal static class Helper
+	internal static class TranscodersHelper
 	{
 		static readonly Regex SubtractFullNameRegex = new Regex(@", Version=\d+.\d+.\d+.\d+, Culture=\w+, PublicKeyToken=\w+", RegexOptions.Compiled);
 

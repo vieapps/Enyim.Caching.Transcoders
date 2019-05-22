@@ -3,8 +3,8 @@ using System.IO;
 using System.Text;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
-
 using ProtoBuf;
+using CacheUtils;
 
 namespace Enyim.Caching.Memcached
 {
@@ -16,11 +16,11 @@ namespace Enyim.Caching.Memcached
 
 		protected override ArraySegment<byte> SerializeObject(object value)
 		{
-			using (var stream = CacheUtils.Helper.CreateMemoryStream())
+			using (var stream = Helper.CreateMemoryStream())
 			{
 				ProtocolBuffersTranscoder.WriteType(stream, value.GetType());
 				Serializer.NonGeneric.Serialize(stream, value);
-				return new ArraySegment<byte>(stream.ToArray(), 0, (int)stream.Length);
+				return stream.GetArraySegment();
 			}
 		}
 
@@ -30,7 +30,7 @@ namespace Enyim.Caching.Memcached
 			var count = value.Count;
 			var offset = value.Offset;
 			var type = ProtocolBuffersTranscoder.ReadType(raw, ref offset, ref count);
-			using (var stream = CacheUtils.Helper.CreateMemoryStream(raw, offset, count))
+			using (var stream = Helper.CreateMemoryStream(raw, offset, count))
 			{
 				return Serializer.NonGeneric.Deserialize(type, stream);
 			}
@@ -70,7 +70,7 @@ namespace Enyim.Caching.Memcached
 		{
 			var typeArray = ProtocolBuffersTranscoder.WriteCache.GetOrAdd(type, x =>
 			{
-				var typeName = Helper.BuildTypeName(x);
+				var typeName = TranscodersHelper.BuildTypeName(x);
 				var buffer = ProtocolBuffersTranscoder.DefaultEncoding.GetBytes(typeName);
 				return buffer;
 			});
