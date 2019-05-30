@@ -15,7 +15,7 @@ namespace Enyim.Caching.Memcached
 				using (var writer = new BsonDataWriter(stream))
 				{
 					new JsonSerializer().Serialize(writer, value);
-					return stream.GetArraySegment();
+					return stream.ToArraySegment();
 				}
 			}
 		}

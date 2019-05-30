@@ -25,7 +25,7 @@ namespace Enyim.Caching.Memcached
 				packer.PackArrayHeader(2);
 				packer.PackString(typeName);
 				MessagePackSerializer.Get(type, defaultContext).PackTo(packer, value);
-				return stream.GetArraySegment();
+				return stream.ToArraySegment();
 			}
 		}
 
