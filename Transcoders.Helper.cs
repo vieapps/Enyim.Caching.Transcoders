@@ -10,6 +10,6 @@ namespace Enyim.Caching.Memcached
 		static readonly Regex SubtractFullNameRegex = new Regex(@", Version=\d+.\d+.\d+.\d+, Culture=\w+, PublicKeyToken=\w+", RegexOptions.Compiled);
 
 		internal static string BuildTypeName(Type type)
-			=> SubtractFullNameRegex.Replace(type.AssemblyQualifiedName, "");
+			=> TranscodersHelper.SubtractFullNameRegex.Replace(type.AssemblyQualifiedName, "");
 	}
 }
