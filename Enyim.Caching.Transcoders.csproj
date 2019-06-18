@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
 		<RootNamespace>Enyim</RootNamespace>
 		<WarningLevel>3</WarningLevel>
 		<AssemblyName>Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
 		<SignAssembly>false</SignAssembly>
 		<AssemblyOriginatorKeyFile>../VIEApps.Components.snk</AssemblyOriginatorKeyFile>
-		<AssemblyVersion>1.6.1906.2</AssemblyVersion>
-		<FileVersion>1.6.1906.2</FileVersion>
-		<InformationalVersion>v1.6.netstandard-2+rev:2019.06.12-stream.array.segments</InformationalVersion>
+		<AssemblyVersion>1.7.1906.3</AssemblyVersion>
+		<FileVersion>1.7.1906.3</FileVersion>
+		<InformationalVersion>v1.7.netstandard-2.x+rev:2019.06.18-multiple.targets.preview</InformationalVersion>
 		<Product>Enyim Memcached</Product>
 		<Company>VIEApps.net</Company>
-		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageId>VIEApps.Enyim.Caching.Transcoders</PackageId>
-		<Version>1.6.1906.2</Version>
+		<Version>1.7.1906.3-preview</Version>
 		<Title>Enyim Memcached Transcoders</Title>
 		<Description>The custom transcoders for VIEApps Enyim Caching (Protocol Buffers, Json.NET Bson, MessagePack)</Description>
 		<Authors>VIEApps.net</Authors>
@@ -23,7 +23,7 @@
 		<PackageLicense>LICENSE.md</PackageLicense>
 		<PackageOutputPath>..\</PackageOutputPath>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
-		<PackageReleaseNotes>Improvement: try to get buffer of streams first</PackageReleaseNotes>
+		<PackageReleaseNotes>Experimental with preview packages</PackageReleaseNotes>
 		<PackageProjectUrl>https://vieapps.net/</PackageProjectUrl>
 		<PackageIconUrl>https://github.com/vieapps/Components.Utility/raw/master/logo.png</PackageIconUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
@@ -41,8 +41,8 @@
 		<PackageReference Include="MsgPack.Cli" Version="1.0.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
 		<PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
-		<PackageReference Include="protobuf-net" Version="2.4.0" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.6.1906.2" />
+		<PackageReference Include="protobuf-net" Version="3.0.0-alpha.43" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.7.1906.3-preview" />
 	</ItemGroup>
 	
 </Project>
