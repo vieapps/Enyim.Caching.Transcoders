@@ -1,7 +1,9 @@
 using System;
 using System.Text.RegularExpressions;
 
+#if !SIGN
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("VIEApps.Components.XUnitTests")]
+#endif
 
 namespace Enyim.Caching.Memcached
 {
