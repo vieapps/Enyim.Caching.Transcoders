@@ -10,9 +10,9 @@ namespace Enyim.Caching.Memcached
 {
 	public class ProtocolBuffersTranscoder : DefaultTranscoder
 	{
-		static ConcurrentDictionary<ArraySegment<byte>, Type> ReadCache = new ConcurrentDictionary<ArraySegment<byte>, Type>(new ByteSegmentComparer());
-		static ConcurrentDictionary<Type, byte[]> WriteCache = new ConcurrentDictionary<Type, byte[]>();
-		static Encoding DefaultEncoding = Encoding.UTF8;
+		static readonly ConcurrentDictionary<ArraySegment<byte>, Type> ReadCache = new ConcurrentDictionary<ArraySegment<byte>, Type>(new ByteSegmentComparer());
+		static readonly ConcurrentDictionary<Type, byte[]> WriteCache = new ConcurrentDictionary<Type, byte[]>();
+		static readonly Encoding DefaultEncoding = Encoding.UTF8;
 
 		protected override ArraySegment<byte> SerializeObject(object value)
 		{
