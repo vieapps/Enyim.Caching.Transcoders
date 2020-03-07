@@ -8,7 +8,7 @@
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
 		<AssemblyVersion>1.7$(ReleaseVersion)</AssemblyVersion>
 		<FileVersion>1.7$(ReleaseVersion)</FileVersion>
-		<InformationalVersion>1.7@$(TargetFramework)#sn:$(Sign)-$(ReleaseRevision)</InformationalVersion>
+		<InformationalVersion>1.7.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
 		<Version>1.7$(ReleaseVersion)$(ReleaseSuffix)</Version>
 		<Product>Enyim Memcached</Product>
 		<Title>Enyim Memcached Transcoders</Title>
@@ -18,7 +18,7 @@
 		<Company>VIEApps.net</Company>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
 		<SignAssembly>$(Sign)</SignAssembly>
 		<AssemblyOriginatorKeyFile>../VIEApps.Components.snk</AssemblyOriginatorKeyFile>
 		<DefineConstants>$(SignConstant)</DefineConstants>
@@ -52,11 +52,11 @@
 		<PackageReference Include="protobuf-net" Version="2.4.4" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(GeneratePackage)'!='true'">
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.7.2003.3" />
+	<ItemGroup Condition="'$(GeneratePackage)' != 'true'">
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="1.7.2003.4" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(GeneratePackage)'=='true'">
+	<ItemGroup Condition="'$(GeneratePackage)' == 'true'">
 		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="1.7$(ReleaseVersion)" />
 	</ItemGroup>
 
