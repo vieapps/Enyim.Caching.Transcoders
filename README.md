@@ -2,7 +2,7 @@
 
 - The custom transcoders of [VIEApps.Enyim.Caching](https://github.com/vieapps/Enyim.Caching).
 
-- Its serializes object using [Protocol Buffers](http://code.google.com/p/protobuf-net/), [Json.NET Bson](https://github.com/JamesNK/Newtonsoft.Json.Bson) and [MessagePack](https://github.com/msgpack/msgpack-cli).
+- Its serializes object using [Protocol Buffers](http://code.google.com/p/protobuf-net/) and [MessagePack](https://github.com/msgpack/msgpack-cli).
 
 ## NuGet
 
@@ -21,7 +21,7 @@
 				"Port": 11211
 			}
 		],
-		"Transcoder": "Enyim.Caching.Memcached.BsonTranscoder, Enyim.Caching.Transcoders"
+		"Transcoder": "Enyim.Caching.Memcached.ProtocolBuffersTranscoder, Enyim.Caching.Transcoders"
 	}
 }
 ```
@@ -39,16 +39,15 @@
 			<add address="127.0.0.1" port="11211" />
 		</servers>
 		<socketPool minPoolSize="10" maxPoolSize="100" deadTimeout="00:01:00" connectionTimeout="00:00:05" receiveTimeout="00:00:01" />
-		<transcoder type="Enyim.Caching.Memcached.BsonTranscoder, Enyim.Caching.Transcoders" />
+		<transcoder type="Enyim.Caching.Memcached.ProtocolBuffersTranscoder, Enyim.Caching.Transcoders" />
 	</memcached>
 </configuration>
 ```
 
 ## Available transcoders
 
-- Default (BinaryFormatter): `Enyim.Caching.Memcached.DefaultTranscoder,Enyim.Caching`
+- Default (Json.NET Bson): `Enyim.Caching.Memcached.DefaultTranscoder,Enyim.Caching`
 - Protocol Buffers: `Enyim.Caching.Memcached.ProtocolBuffersTranscoder,Enyim.Caching.Transcoders`
-- Json.NET Bson: `Enyim.Caching.Memcached.BsonTranscoder,Enyim.Caching.Transcoders`
 - Message Pack Array mode: `Enyim.Caching.Memcached.MessagePackArrayTranscoder,Enyim.Caching.Transcoders`
 - Message Pack Map mode: `Enyim.Caching.Memcached.MessagePackMapTranscoder,Enyim.Caching.Transcoders`
 
