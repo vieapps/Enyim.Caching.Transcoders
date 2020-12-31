@@ -2,7 +2,7 @@
 
 - The custom transcoders of [VIEApps.Enyim.Caching](https://github.com/vieapps/Enyim.Caching).
 
-- Its serializes object using [Protocol Buffers](http://code.google.com/p/protobuf-net/) and [MessagePack](https://github.com/msgpack/msgpack-cli).
+- Its serializes object using [Protocol Buffers](http://code.google.com/p/protobuf-net/), [MessagePack](https://github.com/msgpack/msgpack-cli) and BSON.
 
 ## NuGet
 
@@ -46,7 +46,8 @@
 
 ## Available transcoders
 
-- Default (Json.NET Bson): `Enyim.Caching.Memcached.DefaultTranscoder,Enyim.Caching`
+- Default (MsgPack.CLI): `Enyim.Caching.Memcached.DefaultTranscoder,Enyim.Caching`
+- BSON: `Enyim.Caching.Memcached.BsonTranscoder,Enyim.Caching.Transcoders`
 - Protocol Buffers: `Enyim.Caching.Memcached.ProtocolBuffersTranscoder,Enyim.Caching.Transcoders`
 - Message Pack Array mode: `Enyim.Caching.Memcached.MessagePackArrayTranscoder,Enyim.Caching.Transcoders`
 - Message Pack Map mode: `Enyim.Caching.Memcached.MessagePackMapTranscoder,Enyim.Caching.Transcoders`

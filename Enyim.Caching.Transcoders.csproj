@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;netcoreapp2.1;netcoreapp3.1;net5.0</TargetFrameworks>
+		<TargetFrameworks>net5.0;netcoreapp3.1;netcoreapp2.1;netstandard2.1;netstandard2.0</TargetFrameworks>
 		<WarningLevel>3</WarningLevel>
 		<RootNamespace>Enyim</RootNamespace>
 		<AssemblyName>Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
 		<AssemblyVersion>1.8$(ReleaseVersion)</AssemblyVersion>
-		<FileVersion>2.0$(ReleaseVersion)</FileVersion>
+		<FileVersion>3.0$(ReleaseVersion)</FileVersion>
 		<InformationalVersion>2.0.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
-		<Version>2.0$(ReleaseVersion)$(ReleaseSuffix)</Version>
+		<Version>3.0$(ReleaseVersion)$(ReleaseSuffix)</Version>
 		<Product>Enyim Memcached</Product>
 		<Title>Enyim Memcached Transcoders</Title>
 		<Description>The custom transcoders for VIEApps Enyim Caching (Protocol Buffers and MessagePack)</Description>
-		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © 2020 VIEApps.net</Copyright>
+		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © 2021 VIEApps.net</Copyright>
 		<Authors>VIEApps.net</Authors>
 		<Company>VIEApps.net</Company>
 	</PropertyGroup>
@@ -46,13 +46,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="MsgPack.Cli" Version="1.0.1" />
 		<PackageReference Include="protobuf-net" Version="3.0.73" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="2.0.2012.1" Condition="'$(GeneratePackage)' != 'true'" />
-		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="2.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="3.0.2101.1" Condition="'$(GeneratePackage)' != 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="3.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
 	</ItemGroup>
 
 </Project>
