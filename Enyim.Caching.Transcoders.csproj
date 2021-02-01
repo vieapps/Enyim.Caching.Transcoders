@@ -1,18 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net5.0;netcoreapp3.1;netcoreapp2.1;netstandard2.1;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
 		<WarningLevel>3</WarningLevel>
 		<RootNamespace>Enyim</RootNamespace>
-		<AssemblyName>Enyim.Caching.Transcoders</AssemblyName>
+		<AssemblyName>VIEApps.Components.Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
-		<AssemblyVersion>1.8$(ReleaseVersion)</AssemblyVersion>
-		<FileVersion>3.0$(ReleaseVersion)</FileVersion>
-		<InformationalVersion>2.0.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
-		<Version>3.0$(ReleaseVersion)$(ReleaseSuffix)</Version>
-		<Product>Enyim Memcached</Product>
-		<Title>Enyim Memcached Transcoders</Title>
-		<Description>The custom transcoders for VIEApps Enyim Caching (Protocol Buffers and MessagePack)</Description>
+		<AssemblyVersion>4.0$(ReleaseVersion)</AssemblyVersion>
+		<FileVersion>4.0$(ReleaseVersion)</FileVersion>
+		<InformationalVersion>4.0.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
+		<Version>4.0$(ReleaseVersion)$(ReleaseSuffix)</Version>
+		<Product>VIEApps NGX </Product>
+		<Title>VIEApps NGX Caching</Title>
+		<Description>The custom transcoders for VIEApps Enyim Caching (Json.NET Bson, MessagePack and Protocol Buffers)</Description>
 		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © 2021 VIEApps.net</Copyright>
 		<Authors>VIEApps.net</Authors>
 		<Company>VIEApps.net</Company>
@@ -30,7 +30,7 @@
 		<PackageIcon>Icon.png</PackageIcon>
 		<PackageOutputPath>../</PackageOutputPath>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
-		<PackageReleaseNotes>Upgrade to latest components</PackageReleaseNotes>
+		<PackageReleaseNotes>Breaking: change the assembly name, only support .NET 5 and .NET Standard 2.0</PackageReleaseNotes>
 		<PackageProjectUrl>https://vieapps.net/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -50,8 +50,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="3.0.2101.1" Condition="'$(GeneratePackage)' != 'true'" />
-		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="3.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="4.0.2102.1" Condition="'$(GeneratePackage)' != 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="4.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
 	</ItemGroup>
 
 </Project>
