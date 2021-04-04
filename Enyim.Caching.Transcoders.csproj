@@ -30,7 +30,7 @@
 		<PackageIcon>Icon.png</PackageIcon>
 		<PackageOutputPath>../</PackageOutputPath>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
-		<PackageReleaseNotes>Breaking: change the assembly name, only support .NET 5 and .NET Standard 2.0</PackageReleaseNotes>
+		<PackageReleaseNotes>Upgrade to latest components</PackageReleaseNotes>
 		<PackageProjectUrl>https://vieapps.net/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -46,11 +46,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="protobuf-net" Version="3.0.73" />
+		<PackageReference Include="protobuf-net" Version="3.0.101" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="4.0.2102.1" Condition="'$(GeneratePackage)' != 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="4.0.2104.1" Condition="'$(GeneratePackage)' != 'true'" />
 		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="4.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
 	</ItemGroup>
 
