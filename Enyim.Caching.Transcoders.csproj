@@ -13,7 +13,7 @@
 		<Product>VIEApps NGX </Product>
 		<Title>VIEApps NGX Caching</Title>
 		<Description>The custom transcoders for VIEApps Enyim Caching (Json.NET Bson, MessagePack and Protocol Buffers)</Description>
-		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © 2022 VIEApps.net</Copyright>
+		<Copyright>© 2010 Attila Kiskó, © 2012 Yoshifumi Kawai, © $([System.DateTime]::Now.Year) VIEApps.net</Copyright>
 		<Authors>VIEApps.net</Authors>
 		<Company>VIEApps.net</Company>
 	</PropertyGroup>
