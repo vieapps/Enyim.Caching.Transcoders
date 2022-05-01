@@ -31,9 +31,7 @@ namespace Enyim.Caching.Memcached
 			var offset = value.Offset;
 			var type = ProtocolBuffersTranscoder.ReadType(raw, ref offset, ref count);
 			using (var stream = Helper.CreateMemoryStream(raw, offset, count))
-			{
 				return Serializer.NonGeneric.Deserialize(type, stream);
-			}
 		}
 
 		static Type ReadType(byte[] buffer, ref int offset, ref int count)
@@ -108,9 +106,7 @@ namespace Enyim.Caching.Memcached
 			int result = -1623343517;
 			int offset = segment.Offset, max = offset + segment.Count;
 			while (offset < max)
-			{
 				result = (-1521134295 * result) + (int)buffer[offset++];
-			}
 			return result;
 		}
 	}
