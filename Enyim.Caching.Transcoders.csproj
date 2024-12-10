@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0;net6.0;net5.0;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net9.0;netstandard2.0</TargetFrameworks>
 		<WarningLevel>3</WarningLevel>
 		<RootNamespace>Enyim</RootNamespace>
 		<AssemblyName>VIEApps.Components.Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
-		<AssemblyVersion>7.0$(ReleaseVersion)</AssemblyVersion>
-		<FileVersion>7.0$(ReleaseVersion)</FileVersion>
-		<InformationalVersion>7.0.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
-		<Version>7.0$(ReleaseVersion)$(ReleaseSuffix)</Version>
+		<AssemblyVersion>9.0$(ReleaseVersion)</AssemblyVersion>
+		<FileVersion>9.0$(ReleaseVersion)</FileVersion>
+		<InformationalVersion>9.0.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
+		<Version>9.0$(ReleaseVersion)$(ReleaseSuffix)</Version>
 		<Product>VIEApps NGX </Product>
 		<Title>VIEApps NGX Caching</Title>
 		<Description>The custom transcoders for VIEApps Enyim Caching (Json.NET Bson, MessagePack and Protocol Buffers)</Description>
@@ -27,10 +27,11 @@
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PackageId>VIEApps.Enyim.Caching.Transcoders$(PackageSuffix)</PackageId>
 		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageIcon>Icon.png</PackageIcon>
 		<PackageOutputPath>../</PackageOutputPath>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
-		<PackageReleaseNotes>Latest components</PackageReleaseNotes>
+		<PackageReleaseNotes>2nd year (latest components)</PackageReleaseNotes>
 		<PackageProjectUrl>https://vieapps.net/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -46,9 +47,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="protobuf-net" Version="3.1.25" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="7.0.2211.1" Condition="'$(GeneratePackage)' != 'true'" />
-		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="6.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
+		<PackageReference Include="protobuf-net" Version="3.2.45" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="9.0.2412.1" Condition="'$(GeneratePackage)' != 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="9.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
 	</ItemGroup>
 
 </Project>
