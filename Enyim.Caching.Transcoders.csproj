@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net9.0;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net10.0;netstandard2.0</TargetFrameworks>
 		<WarningLevel>3</WarningLevel>
 		<RootNamespace>Enyim</RootNamespace>
 		<AssemblyName>VIEApps.Components.Enyim.Caching.Transcoders</AssemblyName>
 		<AssemblyTitle>Enyim Memcached Transcoders</AssemblyTitle>
-		<AssemblyVersion>9.0$(ReleaseVersion)</AssemblyVersion>
-		<FileVersion>9.0$(ReleaseVersion)</FileVersion>
-		<InformationalVersion>9.0.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
-		<Version>9.0$(ReleaseVersion)$(ReleaseSuffix)</Version>
+		<AssemblyVersion>10.10$(ReleaseVersion)</AssemblyVersion>
+		<FileVersion>10.10$(ReleaseVersion)</FileVersion>
+		<InformationalVersion>10.10.$([System.DateTime]::Now.Year).$([System.DateTime]::Now.Month).$([System.DateTime]::Now.Day)@$(TargetFramework)#sn:$(Sign)#$(ReleaseRevision)</InformationalVersion>
+		<Version>10.10$(ReleaseVersion)$(ReleaseSuffix)</Version>
 		<Product>VIEApps NGX </Product>
 		<Title>VIEApps NGX Caching</Title>
 		<Description>The custom transcoders for VIEApps Enyim Caching (Json.NET Bson, MessagePack and Protocol Buffers)</Description>
@@ -31,7 +31,7 @@
 		<PackageIcon>Icon.png</PackageIcon>
 		<PackageOutputPath>../</PackageOutputPath>
 		<PackageTags>cache;caching;distributed;distributedcache;memcached;enyim;enyimmemcached;enyim.memcached;enyim.caching;vieapps;vieapps.components</PackageTags>
-		<PackageReleaseNotes>Latest components</PackageReleaseNotes>
+		<PackageReleaseNotes>Support .NET 10</PackageReleaseNotes>
 		<PackageProjectUrl>https://vieapps.net/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/vieapps/Enyim.Caching.Transcoders</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -48,8 +48,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="protobuf-net" Version="3.2.56" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="9.0.2510.2" Condition="'$(GeneratePackage)' != 'true'" />
-		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="9.0$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="10.10.2511.1" Condition="'$(GeneratePackage)' != 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="10.10$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
 	</ItemGroup>
 
 </Project>
