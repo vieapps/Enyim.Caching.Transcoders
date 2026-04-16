@@ -48,7 +48,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="protobuf-net" Version="3.2.56" />
-		<PackageReference Include="VIEApps.Enyim.Caching" Version="10.10.2603.3" Condition="'$(GeneratePackage)' != 'true'" />
+		<PackageReference Include="VIEApps.Enyim.Caching" Version="10.10.2604.24" Condition="'$(GeneratePackage)' != 'true'" />
 		<PackageReference Include="VIEApps.Enyim.Caching$(PackageSuffix)" Version="10.10$(ReleaseVersion)" Condition="'$(GeneratePackage)' == 'true'" />
 	</ItemGroup>
 
